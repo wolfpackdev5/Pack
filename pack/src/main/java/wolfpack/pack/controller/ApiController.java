@@ -12,11 +12,11 @@ import java.util.List;
 @RestController
 @RequestMapping("/")
 @CrossOrigin
-public class ExerciseController {
+public class ApiController {
     @Autowired
     private final ExerciseService exerciseService;
 
-    public ExerciseController(ExerciseService exerciseService) {
+    public ApiController(ExerciseService exerciseService) {
         this.exerciseService = exerciseService;
     }
     @GetMapping("exercises")
