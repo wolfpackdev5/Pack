@@ -3,6 +3,7 @@ package wolfpack.pack.model;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import java.util.List;
 
 @Entity
 public class User {
@@ -11,14 +12,13 @@ public class User {
     @Column
     private String firstName;
     @Column
-    private String[] workout;
+    private List<Exercise> workout;
 
     //Constructors
     public User() {}
-    public User(String email, String firstName, String[] workout) {
+    public User(String email, String firstName) {
         this.email = email;
         this.firstName = firstName;
-        this.workout = workout;
     }
 
     //Getters and Setters
@@ -34,10 +34,10 @@ public class User {
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
-    public String[] getWorkout() {
+    public List<Exercise> getWorkout() {
         return workout;
     }
-    public void setWorkout(String[] workout) {
+    public void setWorkout(List<Exercise> workout) {
         this.workout = workout;
     }
 }

@@ -1,4 +1,7 @@
 package wolfpack.pack.repo;
 
-public interface UserRepo {
+import org.springframework.data.jpa.repository.JpaRepository;
+import wolfpack.pack.model.User;
+
+public interface UserRepo extends JpaRepository<User, String> {
 }
